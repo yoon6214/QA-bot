@@ -1,0 +1,29 @@
+[project]
+name = "qa-bot"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "장선우"}
+]
+readme = "README.md"
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "python-dotenv (>=1.2.2,<2.0.0)",
+    "langchain (>=1.2.12,<2.0.0)",
+    "langchain-openai (>=1.1.11,<2.0.0)",
+    "gradio (>=6.9.0,<7.0.0)",
+    "langchain-community (>=0.4.1,<0.5.0)",
+    "langchain-ollama (>=1.0.1,<2.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "qa_bot", from = "src"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "ipykernel (>=7.2.0,<8.0.0)"
+]
